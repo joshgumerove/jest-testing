@@ -40,4 +40,16 @@ describe("strings", () => {
     const value = "Josh Gumerove is so cool";
     expect(value).toMatch(/Josh Gumerove/);
   });
+
+  it("there is no I in team", () => {
+    const value = "team";
+    expect(value).not.toMatch(/I/);
+  });
+});
+
+describe("arrays", () => {
+  it("tests for containment of a word", () => {
+    const list = ["rice", "beans", "eggs"];
+    expect(list).toContain("rice");
+  });
 });
