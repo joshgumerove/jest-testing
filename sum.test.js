@@ -47,9 +47,21 @@ describe("strings", () => {
   });
 });
 
+function compileAndroidCode() {
+  throw new Error("you are using the wrong JDK");
+}
+
 describe("arrays", () => {
   it("tests for containment of a word", () => {
     const list = ["rice", "beans", "eggs"];
+
     expect(list).toContain("rice");
+    expect(list).not.toContain("beer");
+  });
+});
+
+describe("exceptions", () => {
+  it("tests that an error is thrown", () => {
+    expect(() => compileAndroidCode()).toThrow();
   });
 });
